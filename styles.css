@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
-    background-color: black;
+    background-color: #000000;
     color: #fff;
     box-sizing: border-box;
     min-width: 0;
@@ -12,29 +12,35 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 18px 10%;
+    padding: 2% 10%;
 }
 body{
     min-height: 100dvh;
     position: relative;
     padding-bottom: 20%;
 }
+nav #nav{
+    display: grid;
+    place-items: center;
+}
 #icono-nav{
     display: none;
 }
 .gato{
     position: fixed;
-    left: 17%;
-    top: 4%;
-
+    left: 13.5%;
+    top: 4.6%;
 }
 .gato i{
     cursor: pointer;
-    font-size: 170%;
+    font-size: 185%;
 }
 .gato i:hover{
-    color: #FE7A36;
+    color: #ff8649;
     transform: scale(1.2);
+}
+.pierdes strong{
+    color: #ff8649;
 }
 nav a{
     text-decoration: none;
@@ -45,8 +51,8 @@ a:hover{
     color: #98E4FF;
 }
 .titulo{
-    padding-left: 20%;
-    padding-top: 2%;
+    padding-left: 17%;
+    padding-top: 4%;
 }
 .titulo button{
     background: none;
@@ -58,32 +64,51 @@ a:hover{
     transition: .5s;
     cursor: pointer;
     border-radius: 30px;
-    font-weight: bold;
 }
 .titulo button:hover{
     transform: scale(1.1);
 }
+.titulo h2{
+    color: #ff8649;
+}
+.titulo p{
+    font-size: 112%;
+}
 .principal{
-    padding-left: 20%;
-    padding-top: 3%;
+    padding-top: 5%;
     display: grid;
-    text-wrap: pretty;
-
+    place-items: center;
 }
 .principal .grida{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 100%;
+}
+.principal .grida .prinuno{
+    flex: 40%;
+}
+.principal .grida .prindos{
+    flex: 60px;
 }
 .principal .grida .prindos a{
     text-decoration: none;
-    color: #98E4FF;
+    color: #ff8649;
     font-size: 120%;
 }
-.principal .printres{
-   justify-content: space-around;
+.printres{
+    padding-top: 7.9%;
 }
-.principal .printres .tex{
-    width: 60%;
+.printres h3{
+    text-align: center;
+}
+.printres .tex{
+    text-align: center;
+}
+.printres .tex p{
+    padding: 0 150px;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 120%;
     text-wrap: pretty;
 }
 footer{
@@ -101,3 +126,35 @@ footer{
 
 }
 /*responsive*/
+@media screen and (max-width: 700px){
+    .gato{
+        display: none;
+    }
+    .responsive{
+        display: none;
+    }
+    .titulo{
+        padding-inline-start: 0;
+    }
+    .titulo h2{
+        text-align: center;
+        padding-bottom: 4%;
+    }
+    .grida{
+        flex-direction: column;
+    }
+    .printres .tex p{
+        padding: 0 20px;
+        max-width: 100%;
+        font-size: 100%;
+    }
+    body{
+        padding-bottom: 30%;
+    }
+    footer{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+
+}
